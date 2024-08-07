@@ -49,8 +49,13 @@ header {
 
 .phone-block a {
     color: #777777;
-    font-size: 30px;
+    font-size: 20px;
     text-decoration: none;
+    letter-spacing: 1.4px;
+    display: inline-block;
+    transform: scaleY(1.6);
+    transform-origin: bottom;
+    line-height: 1.5;
 }
 
 .phone-block {
