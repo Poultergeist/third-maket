@@ -81,3 +81,9 @@ header {
         width: auto;
     }
 }
+
+@media screen and (max-width: 555px) {
+    .contact-info {
+        margin-top: 20px;
+    }
+}
