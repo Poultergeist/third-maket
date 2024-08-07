@@ -8,6 +8,11 @@
     font-size: 14px;
 }
 
+.container {
+   width: 980px;
+   margin: 0 10px;
+}
+
 header {
     background-color: #dcdcdc;
     display: flex;
@@ -19,7 +24,6 @@ header {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    width: 980px;
     justify-content: space-between;
 }
 
