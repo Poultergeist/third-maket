@@ -5,10 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>third layout</title>
+  <!-- Styles -->
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 </head>
 
 <body>
+  <!-- Header -->
   <header>
     <div class="container">
       <div class="header-container">
@@ -29,25 +33,46 @@
       </div>
     </div>
   </header>
-  <menu>
-    <div class="menu">
-      <div class="container">
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">
-          <div></div>
-          <div></div>
-          <div></div>
-        </label>
-        <ul class="list-menu">
-          <li class="menu-item"><a href="#" class="menu-item-text">Home</a></li>
-          <li class="menu-item"><a href="#" class="menu-item-text">Catalog</a></li>
-          <li class="menu-item"><a href="#" class="menu-item-text">Delivery and payment</a></li>
-          <li class="menu-item"><a href="#" class="menu-item-text">Price-list</a></li>
-          <li class="menu-item"><a href="#" class="menu-item-text">Contacts</a></li>
-        </ul>
+  <!-- Main document -->
+  <main>
+    <!-- Menu -->
+    <menu>
+      <div class="menu">
+        <div class="container">
+          <input type="checkbox" id="menu-toggle">
+          <label for="menu-toggle" class="menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+          </label>
+          <ul class="list-menu">
+            <li class="menu-item"><a href="#" class="menu-item-text">Home</a></li>
+            <li class="menu-item"><a href="#" class="menu-item-text">Catalog</a></li>
+            <li class="menu-item"><a href="#" class="menu-item-text">Delivery and payment</a></li>
+            <li class="menu-item"><a href="#" class="menu-item-text">Price-list</a></li>
+            <li class="menu-item"><a href="#" class="menu-item-text">Contacts</a></li>
+          </ul>
+        </div>
+      </div>
+    </menu>
+    <!-- Slider -->
+    <div class="slider-wrapper">
+      <div class="slider">
+        <div class="slider-image-container">
+          <div class="slide-image"><img class="slide-image-inner" src="img/slide1.jpg" alt="Slide 1"></div>
+          <div class="slide-image"><img class="slide-image-inner" src="img/slide2.jpg" alt="Slide 2"></div>
+        </div>
+        <div class="slider-buttons">
+          <button class="slider-prev">‹</button>
+          <button class="slider-next">›</button>
+        </div>
       </div>
     </div>
-  </menu>
+  </main>
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>

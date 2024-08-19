@@ -159,84 +159,21 @@ header {
     display: none;
 }
 
-/* Menu style */
-.menu {
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    background-color: #777777;
+/* ----------------------------------Slider style---------------------------------- */
+
+/* Slider centering/resize (i know how it work, but i don`t know HOW it work) */
+.slick-slide img{
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    resize: none;
 }
 
-.list-menu {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    list-style: none;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
+.slide-image {
+    max-height: 400px !important;
+    background-size: cover;
+    background-position: center;
 }
-
-.menu-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu-item>a {
-    color: white;
-    text-decoration: none;
-}
-
-.menu-item>a:hover {
-    text-decoration: underline white 1px;
-}
-
-.menu-item:not(:nth-child(1))::before {
-    content: "|";
-    margin: 10px;
-    color: white;
-}
-
-/* Burger menu style */
-.menu-icon {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    margin: 6px 0;
-}
-
-.menu-icon div {
-    height: 4px;
-    background-color: whitesmoke;
-    margin: 2px 0;
-    transition: all 0.3s ease;
-}
-
-/* Toggle functionality */
-#menu-toggle:checked {
-    +.menu-icon div:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    +.menu-icon div:nth-child(2) {
-        display: none;
-    }
-
-    +.menu-icon div:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    +.menu-icon div {
-        margin: 5px 0;
-    }
-}
-
-/* Disable toggle vision, still works fine */
-#menu-toggle {
-    display: none;
-}
-
 
 /* ----------------------------------Adaptives---------------------------------- */
 
