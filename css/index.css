@@ -1,214 +1,256 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    line-height: 22px;
-    font-family: 'PT sans';
-    font-size: 14px;
+  margin: 0;
+  padding: 0;
+  line-height: 22px;
+  font-family: 'PT sans';
+  font-size: 14px;
 }
 
 .container {
-    width: 980px;
-    margin: 0 10px;
+  width: 980px;
+  margin: 0 10px;
 }
 
 /* ----------------------------------Header style---------------------------------- */
 
 header {
-    background-color: #dcdcdc;
-    display: flex;
-    padding: 40px;
-    justify-content: center;
+  background-color: #dcdcdc;
+  display: flex;
+  padding: 40px;
+  justify-content: center;
 }
 
 .header-container {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .company {
-    display: flex;
-    align-items: center;
-    width: 270px;
-    color: #777777;
+  display: flex;
+  align-items: center;
+  width: 270px;
+  color: #777777;
 }
 
 .company-logo img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }
 
 .company-name {
-    margin: 8px;
-    align-content: space-between;
+  margin: 8px;
+  align-content: space-between;
 }
 
 .company-name-upper {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 12px;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 12px;
 }
 
 .phone-block a {
-    color: #777777;
-    font-size: 20px;
-    text-decoration: none;
-    letter-spacing: 1.4px;
-    display: inline-block;
-    transform: scaleY(1.6);
-    transform-origin: bottom;
-    line-height: 1.5;
+  color: #777777;
+  font-size: 20px;
+  text-decoration: none;
+  letter-spacing: 1.4px;
+  display: inline-block;
+  transform: scaleY(1.6);
+  transform-origin: bottom;
+  line-height: 1.5;
 }
 
 .phone-block {
-    list-style: none;
+  list-style: none;
 }
 
 .contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .contact-info>a {
-    color: #777777;
-    font-weight: bold;
-    text-decoration: underline dashed 1px;
-    justify-self: right;
+  color: #777777;
+  font-weight: bold;
+  text-decoration: underline dashed 1px;
+  justify-self: right;
 }
 
 /* ----------------------------------Menu style---------------------------------- */
 
 /* Menu style */
 .menu {
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    background-color: #777777;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #777777;
 }
 
 .list-menu {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  list-style: none;
 }
 
 .menu-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu-item>a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .menu-item>a:hover {
-    text-decoration: underline white 1px;
+  text-decoration: underline white 1px;
 }
 
 .menu-item:not(:nth-child(1))::before {
-    content: "|";
-    margin: 10px;
-    color: white;
+  content: "|";
+  margin: 10px;
+  color: white;
 }
 
 /* Burger menu style */
 .menu-icon {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
 }
 
 .menu-icon div {
-    height: 4px;
-    background-color: whitesmoke;
-    margin: 2px 0;
-    transition: all 0.3s ease;
+  height: 4px;
+  background-color: whitesmoke;
+  margin: 2px 0;
+  transition: all 0.3s ease;
 }
 
 /* Toggle functionality */
 #menu-toggle:checked {
-    +.menu-icon div:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
+  +.menu-icon div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
 
-    +.menu-icon div:nth-child(2) {
-        display: none;
-    }
+  +.menu-icon div:nth-child(2) {
+    display: none;
+  }
 
-    +.menu-icon div:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
+  +.menu-icon div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
 
-    +.menu-icon div {
-        margin: 5px 0;
-    }
+  +.menu-icon div {
+    margin: 5px 0;
+  }
 }
 
 /* Disable toggle vision, still works fine */
 #menu-toggle {
-    display: none;
+  display: none;
 }
 
 /* ----------------------------------Slider style---------------------------------- */
 
 /* Slider centering/resize (i know how it work, but i don`t know HOW it work) */
-.slick-slide img{
-    width: 100%;
-    max-height: 400px;
-    object-fit: contain;
-    resize: none;
+.slick-slide img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  resize: none;
 }
 
 .slide-image {
-    max-height: 400px !important;
-    background-size: cover;
-    background-position: center;
+  max-height: 400px !important;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Buttons */
+.button-slider {
+  border: none;
+  color: black;
+  width: 30px;
+  height: 60px;
+  background-color: #d1d1d1a3;
+  pointer-events: auto;
+  border-radius: 3px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 0 5px 0;
+}
+
+.button-slider:active {
+  background-color: #d1d1d1;
+}
+
+.slider {
+  position: relative;
+}
+
+.slider-image-container {
+  position: relative;
+  z-index: 1;
+}
+
+.slider-buttons {
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  width: 97%;
+  max-width: 980px;
+  pointer-events: none;
 }
 
 /* ----------------------------------Adaptives---------------------------------- */
 
 /* Header adaptive */
 @media screen and (max-width: 1000px) {
-    .header-container {
-        justify-content: center;
-        width: auto;
-    }
+  .header-container {
+    justify-content: center;
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 574px) {
-    .contact-info {
-        margin-top: 20px;
-    }
+  .contact-info {
+    margin-top: 20px;
+  }
 }
 
 /* Menu adaptive */
 @media screen and (max-width: 500px) {
-    .list-menu {
-        flex-direction: column;
+  .list-menu {
+    flex-direction: column;
+  }
+
+  #menu-toggle:not(:checked) {
+    ~.list-menu {
+      display: none;
     }
 
-    #menu-toggle:not(:checked) {
-        ~.list-menu {
-            display: none;
-        }
+  }
 
-    }
+  .menu-item::before {
+    display: none;
+  }
 
-    .menu-item::before {
-        display: none;
-    }
-
-    .menu-icon {
-        display: flex;
-    }
+  .menu-icon {
+    display: flex;
+  }
 }
