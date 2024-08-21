@@ -481,7 +481,7 @@ header {
   margin-left: 5px;
 }
 
-.developer-name>a,div {
+.developer-name>a,.developer-name>div,.developer-name {
   color:white;
   font-size: 11px;
 }
