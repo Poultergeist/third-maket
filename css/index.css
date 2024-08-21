@@ -318,12 +318,8 @@ header {
   text-decoration: underline black;
 }
 
-.price-list-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+.price-list {
+  margin-top: 150px;
 }
 
 .price-list-text>div {
@@ -335,7 +331,7 @@ header {
 /* Product list */
 .product-list-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: cente  r;
 }
 
 
