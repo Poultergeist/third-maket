@@ -335,9 +335,10 @@ header {
   flex-direction: column;
   align-items: center;
 }
+
 .product-list-wrapper {
   display: flex;
-  justify-content: cente  r;
+  justify-content: center;
 }
 
 
@@ -423,6 +424,7 @@ header {
 .about-company>div {
   margin: 20px;
   flex: 1;
+  font-size: 11px;
 }
 
 .about-company>div:first-child {
@@ -431,6 +433,57 @@ header {
 
 .about-company>div:last-child {
   margin-right: 0;
+}
+
+/* ----------------------------------Footer---------------------------------- */
+
+.footer-wrapper {
+  background-color: #767676;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+}
+
+.copyright>span {
+  color: white;
+  font-size: 11px;
+}
+
+.footer-menu-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.footer-menu-item>a {
+  color:white;
+  font-size: 11px;
+  width: auto;
+}
+
+.about-developer {
+  display: flex;
+  flex-direction: row;
+}
+
+.developer-name {
+  margin-left: 5px;
+}
+
+.developer-name>a,div {
+  color:white;
+  font-size: 11px;
 }
 
 /* ----------------------------------Adaptives---------------------------------- */
@@ -479,7 +532,7 @@ header {
 
 
   .price-list {
-    margin:0;
+    margin: 0;
   }
 
   .left-block {
@@ -530,5 +583,21 @@ header {
 @media screen and (max-width: 560px) {
   .about-company {
     max-width: 270px;
+  }
+}
+
+/* Footer adaptive */
+@media screen and (max-width: 650px){
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer>div {
+    margin-bottom: 10px;
+  }
+
+  .footer-menu-list {
+    align-items: center;
   }
 }
