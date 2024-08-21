@@ -329,6 +329,12 @@ header {
 }
 
 /* Product list */
+
+.center-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .product-list-wrapper {
   display: flex;
   justify-content: cente  r;
@@ -470,6 +476,7 @@ header {
   .content {
     flex-direction: column;
   }
+
 
   .price-list {
     margin:0;
