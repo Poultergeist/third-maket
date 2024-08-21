@@ -217,6 +217,219 @@ header {
   pointer-events: none;
 }
 
+/* ----------------------------------Catalog style---------------------------------- */
+
+/* Breadcrumbs */
+.breadcrumbs {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs-item>a {
+  text-decoration: none;
+  color: #767676;
+  margin: 0 5px;
+}
+
+.breadcrumbs-item:not(:last-child)>a {
+  text-decoration: underline #767676;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  content: "/";
+  text-decoration: none !important;
+}
+
+.breadcrumbs-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Categories */
+.left-block-wrapper {
+  display: block;
+}
+
+.left-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.categories-list {
+  list-style: none;
+}
+
+.categories-list-item>a,
+.subcategories-list-item>a {
+  text-wrap: nowrap;
+}
+
+.categories-list-item>a {
+  color: #777777;
+  text-decoration: none;
+}
+
+.categories-list-item>a:hover {
+  text-decoration: underline #777777;
+}
+
+.subcategories-list {
+  list-style: disc;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in;
+}
+
+.categories-list-item:hover .subcategories-list {
+  max-height: 100px;
+}
+
+.subcategories-list-item {
+  margin-left: 20px;
+  color: #777777;
+  height: 17px;
+}
+
+.subcategories-list-item>a {
+  color: #777777;
+  text-decoration: none;
+  font-size: 12px;
+  display: block;
+}
+
+.subcategories-list-item>a:hover {
+  color: black;
+  text-decoration: underline black;
+}
+
+.price-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.price-list-text>div {
+  color: #444444;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Product list */
+.product-list-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+
+.product-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 810px;
+}
+
+/* Product style */
+.product {
+  background-color: #dcdcdc;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 10px;
+  width: 210px;
+}
+
+.product-image>img {
+  width: 210px;
+}
+
+.product-description {
+  margin-bottom: 40px;
+}
+
+.product-description>a {
+  text-wrap: wrap;
+  text-decoration: none;
+  color: #767676;
+}
+
+.product-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.price>span {
+  color: #444444;
+  font-size: 22px;
+}
+
+/* Pages */
+
+.pages-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.page-number {
+  margin: 10px;
+}
+
+.page-number>a {
+  text-decoration: none;
+  color: #888888;
+}
+
+.current-page>a {
+  font-size: 19px;
+  color: #444444;
+}
+
+/* About style */
+.about-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.about-company {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  border-top: #777777 1px solid;
+  max-width: 810px;
+}
+
+.about-company>div {
+  margin: 20px;
+  flex: 1;
+}
+
+.about-company>div:first-child {
+  margin-left: 0;
+}
+
+.about-company>div:last-child {
+  margin-right: 0;
+}
+
 /* ----------------------------------Adaptives---------------------------------- */
 
 /* Header adaptive */
@@ -252,5 +465,62 @@ header {
 
   .menu-icon {
     display: flex;
+  }
+}
+
+/* Content adaptives */
+@media screen and (max-width: 964px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .left-block {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .categories-list-item:before {
+    content: ">";
+    margin-right: 7px;
+    display: inline-block;
+    background-color: #d1d1d1a3;
+    transition: transform 0.3s ease;
+    align-self: center;
+    justify-self: center;
+    padding: 0px 7px;
+    border-radius: 14px;
+  }
+
+  .categories-list-item:hover::before {
+    transform: rotate(90deg);
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .product-list {
+    justify-content: center;
+  }
+
+  .content {
+    display: flex;
+  }
+
+  .product-list {
+    justify-content: center;
+  }
+
+  .about-company {
+    flex-direction: column;
+    max-width: 540px;
+  }
+
+  .about-company>div {
+    margin: 20px 0;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .about-company {
+    max-width: 270px;
   }
 }
