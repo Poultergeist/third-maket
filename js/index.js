@@ -79,5 +79,10 @@ submitButton.addEventListener('click', function () {
     return;
   }
 
-  alert('Your message was delivered')
+  alert('Your message was delivered');
+  
+  feedbackForm.style.opacity = 0;
+  setTimeout(() => {
+    feedbackForm.style.zIndex = -1;
+  }, 500);
 })
