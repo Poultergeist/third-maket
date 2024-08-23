@@ -25,10 +25,10 @@
         </div>
         <div class="contact-info">
           <ul class="phone-block">
-            <li class="phone"><a href="tel:+380969506859">+38 (096) 950-68-59</a></li>
-            <li class="phone"><a href="tel:+380991086492">+38 (099) 108-64-92</a></li>
+            <li class="phone"><a href="tel:+380969506859">+38(096) 950-68-59</a></li>
+            <li class="phone"><a href="tel:+380991086492">+38(099) 108-64-92</a></li>
           </ul>
-          <a href="#">Feedback</a>
+          <a id="feedback-link" href="#">Feedback</a>
         </div>
       </div>
     </div>
@@ -327,6 +327,37 @@
       </div>
     </div>
   </footer>
+
+  <div id="feedback-form-wrapper">
+    <div class="feedback-container">
+      <div style="display: flex; justify-content: flex-end;">
+        <div id="close-button">
+          <img src="img/icon_close.svg" alt="Close">
+        </div>
+      </div>
+      <div class="feedback">
+        <h1>Feedback</h1>
+        <form id="feedback-form">
+
+          <label for="name">Your name*</label>
+          <input type="text" id="name" pattern="\D{3,32}" placeholder="Input your name" class="important-input" required>
+
+          <label for="number">Phone number*</label>
+          <input type="tel" id="number" pattern="(\+38)?\d{10,10}" placeholder="+38(XXX)XXX-XX-XX"
+            class="important-input" required>
+
+          <label for="email">Email*</label>
+          <input type="email" id="email" placeholder="example@mail.com" class="important-input" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" rows="6" style="resize: none;" required></textarea>
+
+          <button type="submit" id="submit-button">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
