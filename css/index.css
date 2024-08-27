@@ -18,7 +18,7 @@
 header {
   background-color: #dcdcdc;
   display: flex;
-  padding: 40px;
+  padding-top: 40px;
   padding-bottom: 46px;
   justify-content: center;
 }
@@ -400,6 +400,7 @@ header {
 .price>span {
   color: #444444;
   font-size: 22px;
+  font-weight: bold;
 }
 
 /* Pages */
@@ -565,7 +566,7 @@ header {
   width: 100%;
   display: flex;
   flex-direction: column;
-  border: black 1px solid;
+  border: #c3c3c3 1px solid;
   align-items: center;
   margin-bottom: 10px;
   width: 100%;
@@ -582,10 +583,9 @@ header {
   cursor: pointer;
 }
 
-.important-input:invalid {
-  border: red 1px solid;
-  background-color: rgba(255 0 0 / 0.05);
-  box-shadow: rgba(255 0 0 / 0.5) 0 0 5px 2px inset;
+.important-input-wrong:invalid {
+  border: #ff8383 1px solid;
+  box-shadow: #f1b0b0 0 0 10px 5px inset;
 }
 
 
@@ -595,6 +595,7 @@ header {
 /* Header adaptive */
 @media screen and (max-width: 1080px) {
   .header-container {
+    align-items: flex-start;
     justify-content: center;
     width: auto;
   }
@@ -609,9 +610,13 @@ header {
     transform-origin: bottom;
     line-height: 1.5;
   }
+
+  .company {
+  align-items: start;
+  }
 }
 
-@media screen and (max-width: 567px) {
+@media screen and (max-width: 487px) {
   .contact-info {
     margin-top: 20px;
   }
@@ -662,6 +667,10 @@ header {
     margin: 0;
   }
 
+  .left-block-wrapper {
+    width: 100%;
+  }
+  
   .left-block {
     flex-direction: row;
     justify-content: space-evenly;

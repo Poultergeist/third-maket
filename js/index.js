@@ -1,5 +1,6 @@
 $(document).ready(function () {
   $(".slider-image-container").slick({
+    mobileFirst: true,
     autoplay: true,
     infinite: true,
     autoplaySpeed: 4000,
@@ -11,12 +12,12 @@ $(document).ready(function () {
 
   function updateAdaptive() {
     if (window.innerWidth < 768) {
-      $(".slider-prev, .slider-next").hide();
+      $(".slider-buttons").hide();
       $(".slider-image-container").slick('slickSetOption', 'swipe', true, true);
       $(".slider-image-container").slick('slickSetOption', 'draggable', true, true);
     }
     else {
-      $(".slider-prev, .slider-next").show();
+      $(".slider-buttons").show();
       $(".slider-image-container").slick('slickSetOption', 'swipe', false, true);
       $(".slider-image-container").slick('slickSetOption', 'draggable', false, true);
     }
@@ -58,29 +59,45 @@ const phoneField = document.getElementById('number');
 const emailField = document.getElementById('email');
 const messageField = document.getElementById('message');
 
+let isValid = true;
+
 submitButton.addEventListener('click', function () {
   if (!nameField.checkValidity()) {
     alert('Name field must be from 3 to 32 characters long');
-    return;
+    nameField.classList.add('important-input-wrong');
+    isValid = false;
   }
 
   if (!phoneField.checkValidity()) {
     alert('Phone number must be like +38(XXX)XXX-XX-XX (digits only)');
-    return;
+    phoneField.classList.add('important-input-wrong');
+    isValid = false;
   }
 
   if (!emailField.checkValidity()) {
     alert('Email must be like example@mail.com');
-    return;
+    emailField.classList.add('important-input-wrong');
+    isValid = false;
   }
 
   if (!messageField.checkValidity()) {
     alert('Message cannot be empty');
-    return;
+    messageField.classList.add('important-input-wrong');
+    isValid = false;
   }
 
+  if (!isValid) {
+    return;
+  }
+  nameField.classList.remove('important-input-wrong');
+  phoneField.classList.remove('important-input-wrong');
+  emailField.classList.remove('important-input-wrong');
+  messageField.classList.remove('important-input-wrong');
+
+  
   alert('Your message was delivered');
   
+
   feedbackForm.style.opacity = 0;
   setTimeout(() => {
     feedbackForm.style.zIndex = -1;
