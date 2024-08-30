@@ -10,7 +10,7 @@
 
 .container {
   width: 980px;
-  margin: 0 10px;
+  padding: 0 10px;
 }
 
 /* ----------------------------------Header style---------------------------------- */
@@ -641,6 +641,10 @@ header {
       display: none;
     }
 
+  }
+
+  .menu-item>a {
+    font-size: 25px;
   }
 
   .menu-item::before {
